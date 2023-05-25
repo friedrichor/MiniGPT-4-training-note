@@ -14,16 +14,16 @@ Data format:
 ```json
 [
     {
-        'caption': 'the tiki ball logo is displayed on this apron', 
-        'url': 'https://image.spreadshirtmedia.com/image-server/v1/products/P1016953357T1186A359PC1026849373PA2537PT17X1Y0S28/views/1,width=300,height=300,appearanceId=359,version=1497265829/z-tiki-bar-adjustable-apron.png'
+        "caption": "the tiki ball logo is displayed on this apron", 
+        "url": "https://image.spreadshirtmedia.com/image-server/v1/products/P1016953357T1186A359PC1026849373PA2537PT17X1Y0S28/views/1,width=300,height=300,appearanceId=359,version=1497265829/z-tiki-bar-adjustable-apron.png"
     }, 
     {
-        'caption': 'the view of an aerial pool with palm trees', 
-        'url': 'http://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fd22ir9aoo7cbf6.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F4%2F2018%2F01%2FAyana1.jpg&size=1&version=1517393441&sig=e3e14f09e2b062e0fd144306d56abda7&default=hubs%2Ftilebg-blogs.jpg'
+        "caption": "the view of an aerial pool with palm trees", 
+        "url": "http://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fd22ir9aoo7cbf6.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F4%2F2018%2F01%2FAyana1.jpg&size=1&version=1517393441&sig=e3e14f09e2b062e0fd144306d56abda7&default=hubs%2Ftilebg-blogs.jpg"
     }, 
     {
-        'caption': "a sky with clouds women's v - neck", 
-        'url': 'https://render.fineartamerica.com/images/rendered/medium/t-shirt/30/9/images/artworkimages/medium/1/approaching-storm-paxton-mobley.jpg?targetx=0&targety=0&imagewidth=300&imageheight=149&modelwidth=300&modelheight=405'
+        "caption": "a sky with clouds women's v - neck", 
+        "url": "https://render.fineartamerica.com/images/rendered/medium/t-shirt/30/9/images/artworkimages/medium/1/approaching-storm-paxton-mobley.jpg?targetx=0&targety=0&imagewidth=300&imageheight=149&modelwidth=300&modelheight=405"
     }, 
     ...
 ]
