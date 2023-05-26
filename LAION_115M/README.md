@@ -65,3 +65,26 @@ pip install img2dataset
 ```shell
 sh download_laion.sh
 ```
+
+The final dataset structure
+
+```
+.
+├── LAION_115M
+│   ├── laion
+│   │   ├── convert_laion.py
+│   │   ├── download_laion.sh
+│   │   ├── laion_synthetic_filtered_large.json
+│   │   ├── laion_synthetic_filtered_large.tsv
+│   │   └── laion_dataset
+│   │       ├── 00000_stats.json
+│   │       ├── 00000.parquet
+│   │       ├── 00000.tar
+│   │       ...
+│   ├── download_json.py
+...   
+```
+
+### Set up the dataset configuration files
+
+Then, set up the LAION dataset loading path in [MiniGPT-4/minigpt4/configs/datasets/laion/defaults.yaml](../MiniGPT-4/minigpt4/configs/datasets/laion/defaults.yaml#L5) at Line 5 as `${MINIGPT4_DATASET}/laion/laion_dataset/{00000..10488}.tar`
