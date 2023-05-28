@@ -66,6 +66,12 @@ pip install img2dataset
 sh download_laion.sh
 ```
 
+&emsp;&emsp;When downloading, it is necessary to ensure that the network is normal. Generally, about 70% of the images will be crawled, that is, there are in the output:
+```
+worker  - success: 0.699 - failed to download: 0.294 - failed to resize: 0.007 - images per sec: 28 - count: 10000
+```
+Where, `success: ???` basically maintains around 0.69 or more. If the ratio is significantly lower than that, it indicates that there is a network problem. Please check the network.
+
 The final dataset structure
 
 ```
