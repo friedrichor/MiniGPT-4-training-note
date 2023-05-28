@@ -97,11 +97,13 @@ To download and prepare the Stage 2 dataset, please check [second stage dataset 
 ```
 
 Then, run the following command:
+
 ```bash
 torchrun --nproc_per_node $NUM_GPU train.py --cfg-path train_configs/minigpt4_stage2_finetune.yaml
 ```
 
 If you want to run on a/few specific GPU(s), you can use:
+
 ```bash
 CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node 2 train.py --cfg-path train_configs/minigpt4_stage2_finetune.yaml
 ```
@@ -134,19 +136,25 @@ RuntimeError: The server socket has failed to listen on any local network addres
 
 &emsp;&emsp;If you encounter the above error, it may be that you have run `torchrun --nproc_per_node $NUM_GPU train.py --cfg-path train_configs/minigpt4_stage1_pretrain.yaml`, but did not terminate normally (terminate by `closing the terminal` or `Ctrl + Z`, and normal terminating means stop with `Ctrl + C`). You can solve this problem by following these steps：
 
+1. run the following command.
+
 ```bash
 netstat -nlp | grep :29500
 ```
 
-With the above instruction you might get output in the following format  
+With the above command you might get output in the following format  
 `tcp6       0      0 :::29500                :::*                    LISTEN      3964655/python`
+
+2. Next, run the following command.
 
 ```bash
 kill -9 3964655
 ```
+
 &emsp;&emsp;Because the program that was accidentally terminated before is still using memory, it has not really stopped. So kill the process with the `kill -9 {pid}` command.  
 
-Then run the instruction again：
+3. Then, run the command again：
+
 ```bash
 torchrun --nproc_per_node $NUM_GPU train.py --cfg-path train_configs/minigpt4_stage1_pretrain.yaml
 ```
@@ -156,6 +164,7 @@ torchrun --nproc_per_node $NUM_GPU train.py --cfg-path train_configs/minigpt4_st
 ### 2. DDP Error (Training Stage 1)
 
 error: 
+
 ```
 torch.distributed.elastic.multiprocessing.api.SignalException: Process 190221 got signal: 1
 ```
