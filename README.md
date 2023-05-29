@@ -49,7 +49,7 @@ datasets:
     text_processor:
       train:
         name: "blip_caption"
-    sample_ratio: 1
+    sample_ratio: 115
 ```
 
 ## Prepare the pretrained Vicuna weights
