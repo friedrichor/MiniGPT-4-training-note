@@ -25,15 +25,32 @@ conda env create -f environment.yml
 conda activate minigpt4
 ```
 
+<hr>
+
 ## Prepare the datasets
 
 ```bash
 cd ..
 ```
 
-For the subsequent operations, see [LAION_115M/README](LAION_115M)
+see [LAION_115M/README](LAION_115M), you can download `LAION 115M` on your disk.
 
-****
+In addition, Zhu et al. also use `CC3M+CC12M+SBU` dataset, you can download it by referring to (MiniGPT-4/dataset/README_1_STAGE.md)[MiniGPT-4/dataset/README_1_STAGE.md]. It is worth noting that `CC3M+CC12M+SBU` dataset is not used in this tutorial. Of course, you are free to use it or not.
+
+If you not use `CC3M+CC12M+SBU` dataset (only use `LAION 115M` dataset), you need to delete `lines 18-26` of the [MiniGPT-4/train_configs/minigpt4_stage1_pretrain.yaml](MiniGPT-4/train_configs/minigpt4_stage1_pretrain.yaml). Specifically, the branch under `datasets` in the yaml file keeps only the following.
+
+```yaml
+datasets:
+  laion:
+    vis_processor:
+      train:
+        name: "blip2_image_train"
+        image_size: 224
+    text_processor:
+      train:
+        name: "blip_caption"
+    sample_ratio: 1
+```
 
 ## Prepare the pretrained Vicuna weights
 
@@ -58,6 +75,7 @@ The structure of this folder is (Take vicuna-7B, for example):
 │   └── tokenizer.model
 ```
 
+<hr>
 
 ## Training
 
