@@ -18,7 +18,7 @@ A personal note of training MiniGPT-4.
 ## Prepare the code and the environment
 
 ```bash
-git clone https://github.com/Vision-CAIR/MiniGPT-4.git
+git clone https://github.com/friedrichor/MiniGPT-4-training-note.git
 cd MiniGPT-4-training-note
 cd MiniGPT-4
 conda env create -f environment.yml
