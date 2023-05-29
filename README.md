@@ -194,7 +194,8 @@ or the output of the program simply stops at the following line(without the shar
 Running on local URL:  http://127.0.0.1:7863/
 ```
 
-&emsp;&emsp;If you are running `demo.py` on a server, you can set `server_name` so that the generated page can be shared with others.
+&emsp;&emsp;If you are running `demo.py` on a server, you can set `server_name` so that the generated page can be shared with others.  
+
 &emsp;&emsp;that is, change the last line in `demo.py` to the following format:
 
 ```python
