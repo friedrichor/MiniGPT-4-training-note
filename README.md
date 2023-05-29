@@ -187,11 +187,11 @@ error:
 torch.distributed.elastic.multiprocessing.api.SignalException: Process 190221 got signal: 1
 ```
 
-&emsp;&emsp;If you encounter the above error at runtime and it causes the program to terminate, it's probably because you used the `nohup` directive at runtime, that is, it runs through `nohup torchrun --nproc_per_node $NUM_GPU train.py --cfg-path train_configs/minigpt4_stage1_pretrain.yaml`.  
+&emsp;&emsp;If you encounter the above error at runtime and it causes the program to terminate, it's probably because you used the `nohup` command at runtime, that is, it runs through `nohup torchrun --nproc_per_node $NUM_GPU train.py --cfg-path train_configs/minigpt4_stage1_pretrain.yaml`.  
 
-&emsp;&emsp;If you still want run the code on the server, disable the `nohup` directive and use the `screen` directive instead.
+&emsp;&emsp;If you still want run the code on the server, use `screen` command instead of `nohup`.
 
-&emsp;&emsp;For how to use the `screen` directive, you can refer to [here](https://blog.csdn.net/qq_38101208/article/details/107840725)(a Chinese blog).
+&emsp;&emsp;For how to use the `screen` command, you can refer to [here](https://blog.csdn.net/qq_38101208/article/details/107840725)(a Chinese blog).
 
 ### 3. Share Demo (Demo)
 
